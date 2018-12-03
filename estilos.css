@@ -1,0 +1,46 @@
+* {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+
+img {
+ display: block;
+ max-width: 270px;
+ margin: auto;
+}
+
+p {
+text-align: center;
+}
+
+.container {
+ padding-top: 30px;
+ width: 90%;
+ margin: auto;
+}
+
+.buttons {
+ width: 150px;
+ margin: auto;
+ display: flex;
+ justify-content: space-around;
+ padding-top: 10px;
+}
+
+.buttons p {
+ cursor: pointer;
+ color: white;
+ background-color: rgba(255,0,0,1);
+ padding: 5px;
+ border-radius: 10px;
+ width: 70px;
+}
+
+.buttons p:hover {
+ background-color: rgba(180,0,0,1);
+}
+
+.sub-container {
+ padding: 10px;
+}
