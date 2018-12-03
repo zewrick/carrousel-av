@@ -25,24 +25,6 @@ let descripcions = [
 ]
 
 i=0
-previous.addEventListener('click', function ()  {
- if (i > 0){
-   i--
- } else {
-  i = 0
- }
-  imgGroup.src = imgs[i]
-})
-
-next.addEventListener('click', function () {
- if (i < imgSize-1){
-   i++
- } else {
-  i = imgSize -1
- }
-  imgGroup.src = imgs[i]
- 
-})
 
 const slide = () => {
   title.innerHTML = titles[i]
@@ -50,11 +32,40 @@ const slide = () => {
   imgGroup.src = imgs[i]
   i++
 
-  if (i >= imgSize) i=0
+  if (i >= imgSize) {
+    i=0
+  }
   setTimeout('slide()', 2000)
 
 
 }
+
+previous.addEventListener('click', function ()  {
+ 
+ if (i > 0){
+   i--
+ } else {
+  i = 0
+ }
+  imgGroup.src = imgs[i]
+  title.innerHTML = titles[i]
+  description.innerHTML = descripcions[i]
+})
+
+next.addEventListener('click', function () {
+ 
+ if (i < imgSize-1){
+   i++
+ } else {
+  i = imgSize -1
+ }
+  imgGroup.src = imgs[i]
+  title.innerHTML = titles[i]
+  description.innerHTML = descripcions[i]
+ 
+})
+
+
 
 window.onload = slide
 
