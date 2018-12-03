@@ -5,6 +5,24 @@ let imgGroup = document.getElementById('imgs')
 let imgSize = imgs.length
 let  previous = document.getElementById('previous')
 let next = document.getElementById('next')
+let title = document.getElementById('title')
+let description = document.getElementById('description')
+
+let titles = [
+  'Anything is Posible', 
+  'Borderline Syndrome', 
+  'La vie pour les nuls',
+  'Kion vi ocultas',
+  'Pretty'
+]
+
+let descripcions = [
+  'Running all night long',
+  "That'c creepy",
+  'Not your everday anime',
+  'Get used to him for once!',
+  'Dangerous as...'
+]
 
 i=0
 previous.addEventListener('click', function ()  {
@@ -25,4 +43,21 @@ next.addEventListener('click', function () {
   imgGroup.src = imgs[i]
  
 })
+
+const slide = () => {
+  title.innerHTML = titles[i]
+  description.innerHTML = descripcions[i]
+  imgGroup.src = imgs[i]
+  i++
+
+  if (i >= imgSize) i=0
+  setTimeout('slide()', 2000)
+
+
+}
+
+window.onload = slide
+
+
+
 
